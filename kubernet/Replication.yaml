@@ -1,0 +1,32 @@
+kind: ReplicationController                # THis defines to create the object of replication type
+apiVersion: v1
+metadata:
+  name: myreplica
+spec:
+  replicas: 2 # This element define how many pod need to be have every time in in node
+  selector: # tell the container which pod you need to watch .
+    myname: badhon # This must match the level
+  template: # Templete element defines a templete to lunch a new Pod
+    metadata:
+      name: testpod1
+    labels:
+      myname: badhon # Selector value need to match the label valume specifed i the pod templete
+    spec:
+      containers:
+        - name: c00
+          image: ubuntu
+          command:
+            [
+              "/bin/bash",
+              "-c",
+              "while true; do echo Hello-Badhon-Container1; sleep 5 ; done",
+            ]
+
+        - name: c01
+          image: ubuntu
+          command:
+            [
+              "/bin/bash",
+              "-c",
+              "while true; do echo Hello-Badhon-Container 2; sleep 5 ; done",
+            ]

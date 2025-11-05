@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    app.kubernetes.io/name: myapp
+spec:
+  containers:
+    - name: co1
+      image: nginx
+    - name: co2
+      image: nginx
+# now apply the file in dev namespace
+# kubectl apply -f file.yaml -n dev
+
+# Kubectl get pods -n dev
+# kubectl delete -f file.yaml -n dev
+
+# it we want to see the namespace that we create by default 
+# kubectl config set-context $ (kubectl config current-content) --namespace=dev
+
+# to check which namespace are running by defaut 
+# kubectl config view | grep namespace

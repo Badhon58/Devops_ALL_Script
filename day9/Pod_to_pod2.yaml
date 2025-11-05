@@ -1,0 +1,12 @@
+kind: v1
+apiVersion: Pod
+metadata:
+  - name: httpd
+    labels:
+      env: development
+spec:
+  container:
+    - name: httpd_c01
+      image: httpd
+      ports:
+        - containerPort: 80

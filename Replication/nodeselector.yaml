@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod
+  labels:
+    app: nginxPod
+spec:
+  containers:
+    - name: myfirstcontainer
+      image: nginx:1.23
+  nodeSelector:
+    nodeTypes: "productions"
+# to labels a node
+# kubectl label nodes nodehostname nodetype=productions
+# kubectl get nodes -o wide --show-labels

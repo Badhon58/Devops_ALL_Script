@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myvolemptydir
+spec:
+  containers:
+    - name: co1
+      image: centos
+      command: ["/bin/bash", "-c", "sleep 1000"]
+      vloumeMounts:
+        - name: xChanged
+          mountPath: "/tmp/xChanged"
+    - name: co2
+      image: centos
+      command: ["/bin/bash", "-c", "sleep 15000"]
+      vloumeMounts:
+        - name: xChanged
+          mountPath: "/tmp/xChanged"
+  volumes:
+    - name: xxChanged
+      emptyDir: {}
+
+# after apply this file 
+# kubectl apply -f volume.yaml
+
+# Now go to the co1
+# kubectl exec myvolemptydir -c -co1 -it -- /bin/bash

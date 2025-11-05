@@ -1,0 +1,25 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mydeployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels: deployment
+  templete:
+    metadata:
+      name: testpod1
+      lables:
+        name: deployment
+    spec:
+      containers:
+        - name: coo
+          image: httpd
+          ports:
+            - containerPort: 80
+
+
+# First run the application 
+# kubectl apply -f Nt.yaml
+
+# create a new Services 

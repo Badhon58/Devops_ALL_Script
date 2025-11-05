@@ -1,0 +1,29 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: testPod
+spec: 
+  containers: 
+    - name: COD
+      image: ubuntu
+      command: ["/bin/bash","-c","while true; echo Hello  badhon; sleep 5; done "]
+  restart policy: Never
+
+
+# Kubectl apply -f pod.yaml
+
+# Kubectl get pods
+# if we want to see where the exacely pod is running 
+#  -> kubectl get pod -o wide
+#  describe pod
+#  -> kubectl describe pod/testPod
+
+# describe node
+# kubectl describe node ip
+
+# what inside the pod
+# kubectl logs -f podname
+
+# delete pod
+# kubectl delete pod/testPod
+# kubectl delete pod pod.yaml

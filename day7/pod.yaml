@@ -1,0 +1,39 @@
+# Creating a pod using yaml. There are 4 top levels field
+# First is apiVersion, kind, metadata, spec
+# To Check the version of that pods,  $ kubectl  explain pods
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    env: production
+    type: frontend
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+# To Create a pod we can write
+# $kubectl apply/create -f pod.yaml
+
+# To Troubleshoot the pod we need to write
+# $Kubectl describe pod nginx-pod
+
+# To edit the object in the pod 
+# $kubectl edit pod nginx-pod
+
+# To delete a pod we can write
+# $kubectl delete -f pod.yaml
+# $kubectl delete pods nginx-pod
+
+# To get inside the pod
+# kubectl exec -it nginx-pod -- bash
+
+# dry-run
+
+# if implement dry run the it will show what will happend 
+# $kubectl run nginx --image=nginx --dry-run=client -o yaml > pod.yaml
+# $kubectl run nginx --image=nginx --dry-run=client -o json > pod.yaml
+# $kubectl --dry-run=client -o json > pod.yaml

@@ -1,0 +1,15 @@
+# first pod ngnix
+kind: v1
+apiVersion: Pod
+metadata:
+  - name: mydeployment
+    labels:
+      env: development
+spec:
+  container:
+    - name: nginx_c01
+      image: nginx
+      ports:
+        - containerPort: 80
+
+

@@ -1,0 +1,25 @@
+apiVersion: v2
+kind: pod2
+metadata:
+  name: pod2
+  labels:
+    labels1: aws2
+    labels2: linux
+    labels3: nginx
+spec:
+  containers:
+    - name: thirdcontainer
+      image: nginx:1.23
+      env:
+        - name: myname
+          value: badhon
+        - name: city
+          value: vatara
+      args: ["sleep", "3600"]
+
+    - name: forthcontainer
+      image: nginx:1.23
+
+# to Enter Pod from spec container
+# kubectl exec -it pod2 -c containername
+# printenv | egrep -i 'city|vatara'

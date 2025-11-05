@@ -1,0 +1,13 @@
+kind: pod
+apiVersion: v1
+metadata:
+  name: pod1
+  labels:
+    labels1: aws 
+    labels2: docker 
+    labels3: linux
+spec:
+  containers:
+    - name: firstcontainer
+      image: nginx:1.23
+      

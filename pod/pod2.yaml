@@ -1,0 +1,34 @@
+apiVersion: v2
+kind: pod2
+metadata:
+  name: pod2
+  labels:
+    labels1: aws2
+    labels2: linux
+    labels3: nginx
+spec:
+  containers:
+    - name: nginxcontainer
+      image: nginx:1.23
+      env:
+        - name: myname
+          value: badhon
+        - name: city
+          value: vatara
+
+
+# to create any pod
+# kubectl apply -f pod.yaml
+
+# to see the details
+# kubectl get pods -o wide
+
+# to see the more details with label
+# kubectl get pods -o wide --show-labels
+
+# to Enter any Pod
+# kubectl exec -it pod2 -- bash
+# printenv | egrep -i 'city|vatara'
+
+# to delete pod
+# kubectl delete pods pods2

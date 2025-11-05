@@ -1,0 +1,49 @@
+# 3 importent step in selecter (pod selector,replica,templete )
+
+# 3 Life cycle (Create, Replace, Managed)
+
+apiVersion: app/v3
+kind: replicaSet
+metadata:
+  name: nginx_replica
+  labels:
+    app: nginx-replica
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-replica
+  templete:
+    metadata:
+      labels:
+        app: nginx-replica
+    spec:
+      container:
+        - name: nginx
+          image: nginx:1.23
+          ports:
+            - containerPort: 80
+
+
+# to apply the yaml file
+# kubectl apply -f file.yaml
+ 
+# To see details about all pod
+# kubectl get pods -o wide --show-labels
+
+# To see the replica Set 
+# kubectl get replicaset -o wide --show-labels
+
+# TO delete pod
+# kubectl delete pods podId
+
+# TO scall the pods
+# kubectl scale --replicas=4 deploy replicaset 
+
+
+# ________NODE SELECTOR ___________
+
+
+
+
+

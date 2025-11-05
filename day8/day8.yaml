@@ -1,0 +1,33 @@
+# ReplicationController
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nginx-rc
+  labels:
+    env: demo
+
+spec:
+  template:
+    metadata:
+      labels:
+        env: demo
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+  replicas: 3
+
+
+# ------------------------
+# kubectl apply/create -f day8.yaml
+
+# to get the rc '
+# kubectl get rc
+
+# to describe any pod in a replica controller 
+# $kubectl describe pod podname
+
+# to scale up or down the pods
+# $ kubectl scale --replicas=10 nginx-rc

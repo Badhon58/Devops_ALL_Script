@@ -1,0 +1,21 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  - name: networkpod
+    label:
+      env: networking
+spec:
+  container:
+    - name: co1
+      image: ubuntu
+    - name: co2
+      image: httpd
+      ports:
+        - containerPort: 80
+
+
+# Now to apply the pod $ kubectl apply -f ketwork.yaml
+# Now we have to go to the container first => $kubectl exec networkpod -it -c c00 -- /bin/bash
+# Now install and update the package $ apt update -y && apt install curl -y
+# Now we are checking if the container is nubbing on port 80 or not to check if the co2 
+# is running on port 80 or not to check $ curl localhost:80 

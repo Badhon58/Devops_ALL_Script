@@ -1,0 +1,26 @@
+group: apps/v1
+apiVersion: v1
+kind: Deployment
+metadata:
+  - name: nginx-deploy
+    labels:
+      env: development
+spec:
+  template:
+    metadata:
+      labels:
+        env: development
+    spec:
+      containers:
+        - name: nginx-deploy
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+  replicas: 3
+  selector:
+    matchLables:
+      env: development
+
+# to changed the image without changing the file
+
+# kubectl set image deploy/nginx-deploy nginx=nginx:1.9.1

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: myeblvolume
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes: 
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  awsElasticblockStore:
+    volumeId:                # id on ebs
+    fsType: ext4 
+
+# apply persistentvolume 
+# kubectl apply -f file.yaml
+
+# get persistentvolume 
+# kubectl get pv

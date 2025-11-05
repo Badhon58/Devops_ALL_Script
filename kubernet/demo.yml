@@ -1,0 +1,12 @@
+Kind: Cluster
+apiVersion: Kind.x-K8s.io/v1alpha4
+nodes:
+  - role: control-plane
+    images: Kindest/node:v1.31.3
+  - role: worker1
+    images: Kindest/node:v1.31.3
+  - role: worker2
+    images: Kindest/node:v1.31.3
+  - role: worker3
+    images: Kindest/node:v1.31.3
+    # extra
