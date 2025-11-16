@@ -17,4 +17,5 @@ c. Bind Mounts
 --------------------------------------
 How to attach the volume to a container
 docker run -it -v myvolume:/tmp ubuntu /bin/bash
-
+to go inside the docker 
+=> docker attach id
