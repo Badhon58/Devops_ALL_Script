@@ -1,3 +1,4 @@
+<!-- Docker  -->
 1. FROM 
 2. MAINTAINER
 3. RUN
@@ -78,4 +79,63 @@ VOLUME keyword
 It is used to specify DOCKER volume for storing the data 
 VOLUME <volume-name>
 
+-----------------------------
+Build a image using the Dockerfile 
+touch Dockerfile
+----------
+Dockerfile
+----------
+=> FROM ubuntu
+=> RUN touch file1.txt
+=> RUN touch file2.txt
+=> RUN touch file3.txt
+
+From File to image
+Docker build -t mycustomimage .
+HERE -t : tag name 
+
+docker images  -> list of docker image
+docker ps -a -> list of container
+docker run -it mycustomimage /bin/bash 
+docker run -p <browser port: container port>
+
+Deploy the java shopping website
+================================
+1. Install git 
+2. Do the git clone <github url>
+3. cd FedExProjectmar13/
+4. install maven => npm install maven -y
+5. mvn clean package => to build the java application
+6. mvn clean package
+    => After building the java application, copy the war file to tomcat 
+    => Tomcat path: /usr/app/local/tomcat/webapps/
+7. Create an image , Inside the docker file 
+    =>FROM tomcat
+    =>COPY target/shopping-site-web-app.war /usr/local/tomcat/webapps/
+    => 
+8. docker build -t shoppingsite .
+9. docker images
+10. docker run -p 8080:8080 -d shoppingsite
+11. ps -a => list all the container
+
+
+Dependency
+java dependencies existsis a file called: pom.xml
+Python Dependencies exists is : requirements
+.NET or Angular or React , their dependencies exists in  packages:json
+
+--------------Python app ------------------
+FROM python:3.6
+COPY . /app
+WORKDIR /app
+EXPOSE 5000
+RUN pip install -r requirement.txt
+ENTRYPOINT ["python", "app.py"]
+
+
+
+---------------------------------React App ------------------
+
+if you want to give a new dockerfile name:
+Ex: docker build -t react-app -f dockerfilename
 
