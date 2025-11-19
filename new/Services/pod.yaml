@@ -21,7 +21,7 @@ metadata:
 spec:
   containers:
     - name: myapp
-      image: <Image>
+      image: nginx
       resources:
         limits:
           memory: "128Mi"
