@@ -1,0 +1,42 @@
+# name Space Creation
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: clinicall_ns
+---
+# Pod Creation
+apiVersion: v1
+kind: Pod
+metadata:
+  name: clinicallFrontend
+  namespace: clinicall_ns
+  labels:
+    app: clinicall_frontend_app
+spec:
+  containers:
+    - name: clinicall_frontend_image
+      image: nginx
+      resources:
+        requests:
+          cpu: ...
+          memory: ...
+        limits:
+          cpu: ...
+          memory: ...
+      ports:
+        - containerPort: 3000
+---
+# Services Creation
+apiVersion: v1
+kind: Service
+metadata:
+  name: clinicall_frontend_services
+  namespace: clinicall_ns
+spec:
+  selector:
+    app: clinicall_frontend_app
+  ports:
+    - port: 80
+      targetPort: 3000
+      nodePort: 30005
