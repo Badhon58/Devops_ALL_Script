@@ -1,0 +1,3 @@
+-> Add  NGINX is Systemd services
+-> NGINX to run at all times, be restarted is case of a failure , and even services restart
+-> When the server is restart it will execute auto metically
