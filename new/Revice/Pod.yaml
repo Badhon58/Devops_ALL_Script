@@ -1,0 +1,50 @@
+# services
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-nginx-pod-service
+  labels:
+    app: frontend-app
+    tier: frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend-app
+    tier: frontend
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30010
+---
+# deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-app-development
+  labels:
+    app: frontend-app
+    tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend-app
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+        tier: frontend
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+
+
+---
+# Delete an EKS cluster created with eksctl
+# eksctl delete cluster --name "$CLUSTER_NAME" --region "$REGION"
+# eksctl delete cluster --name my-frontend-cluster --region ap-south-1
+# 
