@@ -40,7 +40,7 @@ docker run -d --name nestjs \
 ```
   # Create a volume
   docker volume create prometheus-data
-  
+
   # Run this docker command for prometheus
    docker run -d --name prometheus \
     --network monitoring \
@@ -68,3 +68,19 @@ scrape_configs:
 ```
 docker restart containername
 ```
+
+---
+
+### Home many TODO items were created in the last 2 days ?
+
+How many pending TODO items are there at the moment?
+**4 Types of Metrics:**
+
+- Counter :
+  - Number of TODO items created
+  - Request Count
+- Gauge :
+  - Memory usage
+- Histogram :
+
+- Summary
