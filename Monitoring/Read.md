@@ -84,3 +84,6 @@ How many pending TODO items are there at the moment?
 - Histogram :
 
 - Summary
+docker run -d --name jenkins -p 8080:8080 jenkins/jenkins:lts
+docker run -d --name sonarqube -p 9000:9000 sonarqube:lts
+
