@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: frontend-team
+  namespace: argocd
+spec:
+  description: Project for frontend team apps
+  sourceRepos:
+    - https://github.com/Badhon58/Devops_ALL_Script.git
+  destinations:
+    - namespace: frontend
+      server: https://172.31.47.29:33893
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  roles:
+    - name: frontend-admins
+      description: Admins for frontend team
+      policies:
+        - p, proj:frontend-team:frontend-admins, applications, *, frontend-team/*, allow

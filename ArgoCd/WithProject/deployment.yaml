@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: online
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: online
+  template:
+    metadata:
+      name: online-rs-123
+      labels:
+        app: online
+    spec:
+      containers:
+        - name: online-pod
+          image: amitabhdevops/online_shop:latest
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
