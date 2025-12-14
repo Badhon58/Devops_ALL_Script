@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx
+          image: amitabhdevops/online_shop:latest
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           resources:
             requests:
               memory: "64Mi"
