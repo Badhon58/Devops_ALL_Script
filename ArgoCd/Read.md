@@ -1,3 +1,19 @@
-$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4
-$ chmod 700 get_helm.sh
-$ ./get_helm.sh
+## Adding Cluster to ArgoCD server
+
+1. Check your config contexts:
+
+```
+kubectl config get-contexts
+```
+
+2. Identify your cluster context (e.g., kind-argocd-cluster).Add the cluster to ArgoCD:
+
+```
+argocd cluster add kind-argocd-cluster --name argocd-cluster --insecure
+```
+
+3. Verify using:
+
+```
+argocd cluster list
+```
