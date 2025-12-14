@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: online
   namespace: default
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: online
   template:
     metadata:
+      name: online-rs-123
       labels:
-        app: nginx
+        app: online
     spec:
       containers:
-        - name: nginx
+        - name: online-pod
           image: amitabhdevops/online_shop:latest
           ports:
             - containerPort: 3000
