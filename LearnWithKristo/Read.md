@@ -23,3 +23,7 @@ docker
 manage/configure
 add the sconner scanner add the config
 http://localhost:9000
+
+---
+
+# Part 2 - Kubernetes Delpoyment
