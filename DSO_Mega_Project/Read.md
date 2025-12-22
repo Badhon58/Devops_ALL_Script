@@ -21,18 +21,13 @@ Docker jenkins and Sonarqube docker container
 **_Depedency Install in jenkins _**
 
 ```
-apk update
-apk add wget tar
-wget https://github.com/zricethezav/gitleaks/releases/download/v8.20.1/gitleaks_8.20.1_linux_x64.tar.gz
-tar -xvzf gitleaks_8.20.1_linux_x64.tar.gz
-mv gitleaks /usr/local/bin/
-gitleaks version
 apt update
 apt install -y wget tar
 wget https://github.com/zricethezav/gitleaks/releases/download/v8.20.1/gitleaks_8.20.1_linux_x64.tar.gz
 tar -xvzf gitleaks_8.20.1_linux_x64.tar.gz
 mv gitleaks /usr/local/bin/
 gitleaks version
+---
 apt update
 apt install -y libatomic1
 ---
@@ -48,20 +43,29 @@ docker network connect devsecops jenkins
 docker network connect devsecops sonarqube
 ```
 
+---
+
+$ groups jenkins
+$ groups docker
+$ sudo usermod -aG docker jenkins
+$ groups docker
+$ getent group docker
+$ sudo systemctl restart jenkins
+
 **_pipeline Code _**
 
 ```
 pipeline {
     agent any
-    
+
     tools {
         nodejs "nodejs23"
     }
-    
+
     environment{
         SCANNER_HOME = tool "sonar-scanner"
     }
-    
+
     stages {
         stage("Clean WorkSpace"){
             steps{
