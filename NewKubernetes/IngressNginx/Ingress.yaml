@@ -1,0 +1,54 @@
+# Path based Routing
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-rules
+spec:
+  ingressClassName: nginx 
+  rules:
+    - host:
+      http:
+        paths:
+          - path: /nginx
+            frontend:
+              service:
+                name: nginx-service
+                port:
+                  number: 80
+          - path: /flask
+            backend:
+              service:
+                name: flask-service
+                port:
+                  number: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-rules
+spec:
+  rules:
+    - host: nginx-app.com
+      http:
+        paths:
+          - frontend:
+              service:
+                name: nginx-service
+                port:
+                  number: 80
+    - host: flask-app.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: flask-service
+                port: 
+                  number: 3000
+    - host:
+      http:
+        paths:
+          - frontend:
+              service:
+                name: nginx-service
+                port:
+                  number: 80
