@@ -1,0 +1,22 @@
+# ROle
+apiVersion: rbac.authorization.k8s.io.v1
+kind: Role
+metadata:
+  name: pod-reader
+  namespace: default
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "watch", "list", "create"]
+    verbs: ["get", "watch", "list", "create"]
+---
+# Cluster Role
+apiVersion: rbac.authorization.k8s.io.v1
+kind: ClusterRole
+metadata:
+  name: secret-reader
+rules:
+  - apiGroups: [""]
+    resources: ["nodes"]
+    verbs: ["get", "watch", "list", "create"]
+
+# Role binding
