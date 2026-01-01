@@ -133,3 +133,48 @@ The difference is that Role is used inside of a namespace, ehile ClusterRole is 
 2. API Resources the set of kubernetes API Objects available in the cluster are called Resources. for exmaple:
    Pods, Deployments, Services, Nodes, PersistentVolumes etc.
 3. Subjects: THese are the objects (Users, Groups, preocesses (Service Account) allowed access to the API, based on verbs and Resources
+
+---
+
+### Generate namespace for ServiceAccounts
+
+```
+# for Admin Service Account
+kubectl create namespace ns1
+
+# For General Service Account
+kubectl create namespace ns2
+
+# For Other Service Account
+$ kubectl create namespace ns3
+```
+
+---
+
+### Generate Token for ServiceAccounts
+
+```
+# for Admin Service Account
+kubectl -n default create token admin
+
+# For General Service Account
+kubectl -n default create token general
+
+# For Other Service Account
+kubectl -n default create token other
+```
+
+# Now Copy all the yaml from
+
+VVI
+
+```
+cat ~/.kube/config
+```
+Create a new ec2 instance
+
+apt update -y
+sudo snap install kubectl --claasic
+vim kubeconfig-admin.yaml
+- past all the code from cat ~/.kube/config
+export KUBECONFIG=/hom/ubuntu/kubeconfig-admin.yaml
