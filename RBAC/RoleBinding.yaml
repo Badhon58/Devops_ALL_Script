@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: Read-Only-Binding
+  namespace: default
+subjects:
+  - kind: User
+    name: Badhon
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: read-only
+  apiGroup: rbac.authorization.k8s.io

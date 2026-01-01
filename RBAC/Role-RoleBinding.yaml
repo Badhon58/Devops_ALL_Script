@@ -1,0 +1,26 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: read-only-role
+  namespace: default
+rules:
+  - apiGroup: [""]
+    resources: ["pods", "deployement"]
+    verbs: ["create", "watch"]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: read-only-role-binding
+  namespace: default
+subjects:
+  - kind: User
+    name: Badhon
+    apiGroup: rbac.authorization.k8s.io
+  - kind: User
+    name: Biswas
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: read-only-role
+  apiGroup: rbac.authorization.k8s.io
