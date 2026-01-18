@@ -133,9 +133,11 @@ server {
 
 - Create a container with the name container_1
   $ docker run --name container_name_1 -itd -p 81:80 --network my_net container_one
+  or $ docker run --name container_name_1 --network my_net container_one
 
 - Create a container with the name container_2
   $ docker run --name container_name_2 -itd -p 82:80 --network my_net container_two
+  or $ docker run --name container_name_2 --network my_net container_two
 
 - Now run this docker command to create a nginx-proxy-manager command
   $ docker run -it --name reverse-proxy \
