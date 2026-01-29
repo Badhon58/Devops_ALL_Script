@@ -9,7 +9,7 @@
   - MAX Sized is 16 TB
   - EBS is Billable
   - Types of EBS Volumes
-    - General Purpose (gp2, gp3) -SSD = General Purpose
+    - General Purpose (gp2, gp3) - SSD = General Purpose
     - Provisioned IOPS (io1, io2) - SDD = High Performance
     - Throughput(st1) - HDD = Frequently access data with cheaper price
     - COLD(sc1) - HDD = Not Frequently access data with cheaper price
@@ -26,6 +26,7 @@
     - Additional volumes supports ALL types
     - io1 and io2 can be multi-attached
     - io1 and io2 can be attached to multiple EC2 instances at the same time in same ZA
+    - gp3,io1,io2 (IOPS)
 
 - **_Instance Store Volumes_**
   - If you stop and start the EC2 instance, Data is LOST/Deleted
