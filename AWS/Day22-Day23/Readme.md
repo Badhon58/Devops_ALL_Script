@@ -44,3 +44,6 @@ Not Encrypted -> Not Encrypted
 
 - Copy of the OS is called Image
 - Image = AMI = Amazon machine Image
+
+- Key pair is used to retrieve the password
+- key pair is the combination of private and public key
