@@ -48,3 +48,29 @@ Q. What are the main cloud service models? Difference between IaaS, PaaS, and Sa
 - **_SaaS (Software as a Service)_**
   - Managed By AWS
     - Application, Data, Runtime, Middleware, OS, Virtualization, Servers, Storage, Networking
+
+---
+
+Q. What is the AWS Shared Responsibility Model ?
+
+- The AWS Shared Responsibility Model defines who is responsible for what when using AWS cloud services, It splits responsibilities between AWS and customer (company)
+
+---
+
+Q. What are the main categories of AWS services? What are the top 25 services?
+
+- Compute, Database, Storage, Networking , Content Delivery Messaging , Integration Security, Infra/DevOps
+
+- **_Compute_** : Elastic Beanstalk, EC2, Lambda, Amazon ECS
+
+- **_Database:_** RDS, DynamoDB, Redis, Aurora.
+
+- **_Storage:_** S3, EBS, EFS.
+
+- **_Networking & Content Delivery:_** VPC, Route53, CloudFront, ELB, API Gateway.
+
+- **_Messaging & Integration:_** SNS, SQS, Event Bridge
+
+- **_Security:_** IAM, Secrets Manger, KMS
+
+- **_Infra/DevOps:_** CloudFormation, CloudWatch, CodePipeline, CodeDeploy
