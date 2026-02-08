@@ -20,7 +20,7 @@ Q. What are the 5 advantages of using aws over on-premises server?
 
 Q. What are the main cloud service models? Difference between IaaS, PaaS, and SaaS? -
 
-![Image description](https://prnt.sc/f6Zri8CBr7T7)
+![Screenshot](https://prnt.sc/f6Zri8CBr7T7)
 
 - On Premises Managed by Company
   - Application, Data, Runtime, Middleware, OS, Virtualization, Servers, Storage, Networking
