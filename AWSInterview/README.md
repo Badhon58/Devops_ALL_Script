@@ -1,4 +1,4 @@
-Q. What is Cloud Computing ? What is AWS
+### Q. What is Cloud Computing ? What is AWS
 
 - Cloud Computing is the delivery of computing services like servers, storage, databases, network, software, and AI over the internet (the cloud) instead of using physical hardware or local servers
 
@@ -6,7 +6,7 @@ Q. What is Cloud Computing ? What is AWS
 
 ---
 
-Q. What are the 5 advantages of using aws over on-premises server?
+### Q. What are the 5 advantages of using aws over on-premises server?
 
 - **_Cost Savings_**: pay-as-you-go-model as no need to buy expensive hardware; pay only for what you use. no maintenance costs
 
@@ -18,7 +18,7 @@ Q. What are the 5 advantages of using aws over on-premises server?
 
 ---
 
-Q. What are the main cloud service models? Difference between IaaS, PaaS, and SaaS? -
+### Q. What are the main cloud service models? Difference between IaaS, PaaS, and SaaS? -
 
 ![Screenshot](https://prnt.sc/f6Zri8CBr7T7)
 
@@ -51,13 +51,13 @@ Q. What are the main cloud service models? Difference between IaaS, PaaS, and Sa
 
 ---
 
-Q. What is the AWS Shared Responsibility Model ?
+### Q. What is the AWS Shared Responsibility Model ?
 
 - The AWS Shared Responsibility Model defines who is responsible for what when using AWS cloud services, It splits responsibilities between AWS and customer (company)
 
 ---
 
-Q. What are the main categories of AWS services? What are the top 25 services?
+### Q. What are the main categories of AWS services? What are the top 25 services?
 
 - Compute, Database, Storage, Networking , Content Delivery Messaging , Integration Security, Infra/DevOps
 
@@ -74,3 +74,14 @@ Q. What are the main categories of AWS services? What are the top 25 services?
 - **_Security:_** IAM, Secrets Manger, KMS
 
 - **_Infra/DevOps:_** CloudFormation, CloudWatch, CodePipeline, CodeDeploy
+
+---
+
+### Q. What is Hybrid Cloud
+
+- **_Hybrid Cloud_** = On-premises + AWS cloud
+- Hybrid Cloud means combining on-premises infrastructure (like your own data center or servers) with AWS cloud services, so they work together
+
+---
+
+### Q.
