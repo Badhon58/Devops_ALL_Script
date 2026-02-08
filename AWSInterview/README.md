@@ -84,4 +84,10 @@
 
 ---
 
-### Q.
+### Q. What is a Resource in AWS? How is it different from a Service in AWS?
+
+- **_ AWS Service_** : A Service is a tool or feature offered by AWS to perform tasks like computing, storage, networking, or security
+
+- **_ AWS Resource _** : A resource is AWS is an instance of a service that you create configure, and use in the cloud
+
+---
