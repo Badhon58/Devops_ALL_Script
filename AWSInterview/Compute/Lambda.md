@@ -48,3 +48,9 @@
 
 - In case of your compiled languages, upload your code in the form of a ZIP archive deployment package.
 - You create a Docker image of your application and store it into Amazon ECR repository. Create your function defined as a container image
+
+### Types of lambda Invocation
+
+- Synchronous invocation: Lambda invoke the function and wait for a response (Amazon API Gateway, Amazon Step Function, Amazon Cognito, ETC)
+- Asynchronous Invocation: Lambda pushes the event in a queue and sends a simple success response to the client without extra information ( Amazon S3, Amazon SNS)
+

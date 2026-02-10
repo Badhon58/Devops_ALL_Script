@@ -90,4 +90,6 @@
 
 - **_ AWS Resource _** : A resource is AWS is an instance of a service that you create configure, and use in the cloud
 
+**_Event Source Mapping and Event Filtering_** : An Event Source Mapping is a Lambda resource that reads from an event source and invokes a Lambda function on the basis of event Filtering
+
 ---
