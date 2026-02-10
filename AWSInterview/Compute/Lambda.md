@@ -1,20 +1,16 @@
-### What is AWS Lambda
+**_What is AWS Lambda_** : AWS lambda is a secure, event-driven, serverless compute service that scales as needed and bulled only for what is used
 
-- AWS lambda is a secure, event-driven, serverless compute service that scales as needed and bulled only for what is used
+**_Serverless_** : Serverless doesn't mean there are no servers. you don't manage the servers or any physical infrastructure. Aws manages every things for you
 
-- Q. Serverless
-  - Serverless doesn't mean there are no servers. you don't manage the servers or any physical infrastructure. Aws manages every things for you
-
-- Q. Event-driven:
-  - Pushed based architecture instead of continuous pooling
+**_Event-driven_** : - Pushed based architecture instead of continuous pooling
 
 - Create Own Lambda Function
-  Cloud compute service without the need of managing a server
-  You only own the code or provide container image
-  Write the code in your preferred language
-  Ideal for short, event driven workloads
-  pay only for the duration of usage of compute resources
-  CPU power allocation proportional to the amount of memory provisioned
+- Cloud compute service without the need of managing a server
+- You only own the code or provide container image
+- Write the code in your preferred language
+- Ideal for short, event driven workloads
+- pay only for the duration of usage of compute resources
+- CPU power allocation proportional to the amount of memory provisioned
 
 ### Terminology
 
