@@ -25,7 +25,7 @@
 - **_Qualifier_**: Used to specify a version or alias of your function. A version is an immutable snapshot of your function while an Alias is a pointer to a specific version of a function
 - **_Destination_**: An AWS resource that receives event from lambda generally from an asynchronous invocation.
 
-**_An Event_**
+### An Event
 
 ```
 {
@@ -38,3 +38,12 @@
     }
 }
 ```
+
+### Creating a Lambda Function
+
+- A deployment package denoted your compiled source code along with all other dependencies Lambda supports two types of deployment packages:
+- Write your code in Lambda console editor for non-compiled language.
+
+- In case of your compiled languages, upload your code in the form of a ZIP archive deployment package.
+
+- You create a Docker image of your application and store it into Amazon ECR repository. Create your function defined as a container image
