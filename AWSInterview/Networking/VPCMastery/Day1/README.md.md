@@ -45,9 +45,9 @@
 
 Create a Virtual Private Cloud (VPC) with the following configuration:
 
-- **Name:** My-VPC  
-- **IPv4 CIDR Block:** `192.168.0.0/24`  
-- **Tenancy:** Default  
+- **Name:** My-VPC
+- **IPv4 CIDR Block:** `192.168.0.0/24`
+- **Tenancy:** Default
 
 This CIDR block (`192.168.0.0/24`) defines the private IP range for the network.
 
@@ -76,16 +76,17 @@ For this setup, we will create **4 subnets** from the `192.168.0.0/24` network.
 
 ### Subnet Plan
 
-| Subnet Name | CIDR Block        | Type    |
-|-------------|------------------|---------|
+| Subnet Name | CIDR Block       | Type    |
+| ----------- | ---------------- | ------- |
 | Public-1    | 192.168.0.0/26   | Public  |
 | Public-2    | 192.168.0.64/26  | Public  |
 | Private-1   | 192.168.0.128/26 | Private |
 | Private-2   | 192.168.0.192/26 | Private |
 
 Each `/26` subnet provides:
-- 64 total IP addresses  
-- 59 usable IP addresses  
+
+- 64 total IP addresses
+- 59 usable IP addresses
 
 ![4 Subnets from 192.168.0.0/24](2.png)
 
@@ -121,8 +122,8 @@ We will modify it to allow internet traffic.
 3. Click **Routes → Edit Routes**
 4. Add the following route:
 
-| Destination | Target |
-|------------|--------|
+| Destination | Target           |
+| ----------- | ---------------- |
 | `0.0.0.0/0` | Internet Gateway |
 
 `0.0.0.0/0` allows outbound internet traffic.
@@ -139,6 +140,7 @@ We will modify it to allow internet traffic.
 4. Save changes
 
 Now:
+
 - Public subnets have internet access
 - Private subnets do not have direct internet access
 
