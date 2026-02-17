@@ -94,5 +94,5 @@
     - Custom Route Tables : Created manually for specific routing needs
   - _Point To Consider_ :
     - Define rules to determine network traffic direction
-  - Route Tables per VPC : Default limit is 200
-  - Routes per Route Table : 50
+  - _Route Tables per VPC_ : Default limit is 200
+  - _Routes per Route Table_ : 50
