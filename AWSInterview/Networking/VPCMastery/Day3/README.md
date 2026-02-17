@@ -1,0 +1,14 @@
+- VPC Parring
+- Create 2 VPC in private with different ip
+  - 192.168.0.0/24 (Sender)
+    - Create A EC2 in Private Subnet
+    - Access The EC2 using endpoint
+  - 192.168.1.0/24 (Receiver)
+    - Create A EC2 in Private Subnet
+    - Access The EC2 using endpoint
+- Then Create VPC Peering in sender region.
+  - then select or give all the requirement
+  - then the Receiver will accept the invitation
+- Now in Sender region add the 192.168.1.0/24 (Receiver) ip to the Route Table and select the Peering id
+- And Also in Receiver region add the 192.168.0.0/24 (Sender) ip th the Route Table
+- Then try to ping private ip From the Sender EC2 to Receiver
