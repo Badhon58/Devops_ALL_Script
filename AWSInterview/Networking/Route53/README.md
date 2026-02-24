@@ -29,3 +29,17 @@
 
 ns = Name Server
 soa = start of authority
+
+add a server with this command
+
+```
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1> Hello world from $(hostname -f) </h1>" > /var/www/html/index.html
+```
+
+---
+
+
