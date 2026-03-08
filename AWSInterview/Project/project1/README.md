@@ -48,4 +48,5 @@ def lambda_handler(event, context):
 
 - Test the System
   ![Uploading The File](S3.png)
+- Email Notification Send
   ![Email View](outlookemail.png)
