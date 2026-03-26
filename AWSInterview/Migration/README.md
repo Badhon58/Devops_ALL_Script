@@ -95,3 +95,52 @@ What is Migration?
         migration is successful.
 4.  Optimise/Modernise.
     - Alerts, logging, revoke access, security, reliability, resilience.
+
+---
+
+# Data Migration To AWS
+
+## Objectives
+
+- After completing this module, you should be able to :
+  - know about Data Migration to AWS
+  - Understand the type of Data Migration Services provided by AWS and their working
+  - Understand the use cases for the Data Migration services
+  - Enable S3 transfer acceleration to accelerate the data transfer speed
+
+## Introduction of Data Migration to AWS
+
+- Data Migration to AWS
+  - It is the process of moving data from onsite computers to AWS
+
+- Data Migration Challenges
+  - 1.  Amazon S3 Bucket Name Restrictions
+  - 2.  AWS SSL Certificates and CloudFront
+  - 3.  Defining Cache Policy With Amazon CloudFront
+  - 4.  Data Consistency
+  - 5.  Setting Up HTTP Headers
+  - 6.  AWS S3 Security
+  - 7.  Optimizing with S3 Storage Types
+
+- Data Migration Services
+  - Direct Connect
+  - AWS Snowball
+  - AWS Snowmobile
+  - S3 Transfer Acceleration
+  - Storage Gateway
+  - Snowball Edge
+  - Kinesis Firehouse
+
+- Direct Connect
+  - Establish a dedicated network connection from the on-premise environment to AWS
+  - Same connection can be used for both public and private resources
+
+- AWS Snowball
+  - It is a service that accelerates large data transfer in and out of aws using physical storage appliances or by internet bypassing
+  - It provides powerful interfaces to create jobs, transfer data and track the status
+
+---
+
+# Storage Gateway
+
+- AWS storage gateway is hybrid storage services?
