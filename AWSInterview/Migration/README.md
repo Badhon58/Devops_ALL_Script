@@ -50,3 +50,48 @@ What is Migration?
 - **_Re-platform (Lift, Tinker & Shift)_** when organizations have outdated structures to move into IaaS cloud platforms. Instead of Changing the core of the applications, they are emulated through a VM so that systems become compatible with modern-day cloud technologies without restructuring the systems
 - **_Retain_** is a strategy to keep some elements in your on-premise which are not ready to migrate, focusing on Migrating what makes sense for the business.
 - **_Retire_** is to identify the assets that are no longer useful and can be removed which helps in boosting your business case and giving attention towards maintaining the needful resources which can be widely used.
+
+### 7R Migration Infrastructure Architecture
+
+![Create Visual ETL](migrationArtcheture.png)
+
+### AWS Well Architecture Framework
+
+- AWS Well Architecture framework is a document created by AWS which can be used to design your AWS infrastructure architecture by using the appropriate services.
+- Customer can apply their framework periodically on their target AWS environment
+- This will help customers in delivering the following benefits
+- Performance Efficiency and Scalability
+- Security and Compliance
+- Cost Optimization
+- Operational Efficiency
+- Reliability and Resiliency
+- Sustainability
+
+### AWS Migration Best Practices
+
+- Start small and simple : Use AWS Services to get simple tasks done quick and quickly the more your staff becomes comfortable with AWS services, and the faster your stack holders see the benefits, the easier it is to convince them of the benefits of AWS.
+- Automate : Automate extensively to realize the speed of cloud computing, spend time revisiting processes and establishing new ones that can be automated as you migrate
+- Adaptive : Adjust your internal processes so that the stack holders are able to embrace this technological change and align themselves with this new paradigm.
+
+### AWS Migration Best Practices
+
+- Leverage Fully managed services wherever possible
+- Let AWS handle the day-to-day maintenance activities and free up your team to focus on customers
+- You can Monitor everything comprehensively and have data-driven insights into how the environmental performance and use them to make business decisions when considering trade-offs between performance and costs.
+
+### Phases of migration
+
+1.  Discovery/Assessment
+    - Rehost, Re-platform, Retire, Refactor.
+2.  Mobilise
+    - VPC, Security Groups, creating the users/permissions/roles, budgets
+3.  Migrate
+    - Start the replication/migration/copying to the cloud provider.
+    - Days/Weeks/Month.
+    - Continue to use the source machines . business as usual
+    - Cut-over
+      - failover from on-prem to cloud machine ...
+      - failover --> rollback from cloud to onprem .
+        migration is successful.
+4.  Optimise/Modernise.
+    - Alerts, logging, revoke access, security, reliability, resilience.
