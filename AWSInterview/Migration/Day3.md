@@ -21,3 +21,19 @@ Phases:
   - Rollback/retain successful resources.
 
 * **_Cloud provisioning_** : is the process of setting up, allocating, and managing cloud computing resources—such as virtual machines, storage, networking, and applications—for user or organization access
+
+### jump box server
+
+- A jump box server (also called a bastion host) is a secure intermediary server that you use to access other servers inside a private network.
+
+- What is a Jump Box Server?
+  - A jump box is a server that:
+    - Sits between the public internet and your private servers
+    - Acts as a controlled entry point
+    - Lets you SSH into one server first, then “jump” to others
+
+---
+
+### ADS = Application Discovery Services
+
+- Collects configuration, usage and behavioral data from on-premise servers and helps to plan the migration to AWS Cloud
