@@ -91,6 +91,11 @@
     - Type the followinf SQL command to create a new database
       - $ CREATE DATABASE badhon;
 
-4. DMS 
-  - In First progress is Replication Instance 
-  - 
+4.  DMS
+    - In First progress is Replication Instance, After Create the Replication Instance we need to create the endpoint to connect the source and rds. and then we need to create a Replication Task
+    - Component to create in order
+      - **_Replication instance_**
+      - **_Endpoint_**
+        - In the Source Endpoint and Target Endpoint we have to give the details configuration about the both source and target endpoint. 
+      - **_Replication Task_**
+    - Note : In Endpoint if we use ec2 then we have to give the Access to endpoint database as . <mark> Provide access information manually </mark>
