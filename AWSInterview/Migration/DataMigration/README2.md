@@ -21,6 +21,7 @@
 
 - **_AWS DMS Source & Targets_**
   - AWS SCT + AWS DMS
+  - SCT = Schema Migration Tool
 
 - **_Migration Modes_**
   - Online Migration
@@ -34,3 +35,8 @@
   - AWS SCT will be installed in the source DB server
 
 ## Source Database -> Source Endpoint -> Replication Task -> Target EndPoint -> Target Database
+
+- In DMS Process
+  - create Replication instance: Work Like agent to process the data source to target
+  - Source Endpoint : Source Connection point . (EC2, On-prem DataBase)
+  - Target Endpoint : Target connection point . (RDS)
