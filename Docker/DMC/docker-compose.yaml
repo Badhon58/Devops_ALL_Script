@@ -1,0 +1,36 @@
+version: "3" # If no version is specified then v1 is assumed
+services: # Containers. Same as docker run
+  services_image_01: # Container Name. this is also DNS name inside network
+    #  image: nginx  # Name of that image
+     container_name: video-call-service # Same as --name in docker run 
+     build:
+      context: ./video-call-service # Where out docker file located \ or which folder should we mae image
+      dockerfile: Dockerfile
+     command : ["npm", "run", "start"] # optional, replace the default CMD specified by the image
+     environment: # Same as -e in docker run 
+      KEY: value
+     env_file: # same as - env-file in docker run 
+      - .env
+     ports: # same as -p in docker run 
+      - "80:80"
+     volumes: # same as -v in docker run 
+        - my_vol:/ust/share/nginx/html
+     networks:
+      - microservices-network
+  services_image_02:
+    image: nat
+    ports:
+      - "4100:4100"
+    networks:
+      - bridge
+  services_image_03:
+    build: # To build a image from the system
+      context: ./backend
+      dockerfile: Dockerfile
+    depends_on: # it will exec after the services_image_01
+      - services_image_01
+volumes: # Same as volume
+  my_vol:
+networks: # Same  as network
+  microservices-network:
+    driver: bridge
