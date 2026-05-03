@@ -29,3 +29,33 @@ Docker Communication between Containers
     - Host :
     - None :
     - Overlay :
+
+---
+
+## Docker Network
+
+- When we config docker first docker create a private network inside the server the sider range is 172.17.0.0/16
+- so lets say an container is running on port 172.17.X.X:80. Now, How do we access this container from the browser. the internet can't communicate with the container. so we did port mapping. so when we do port mapping like E.X. docker run --name con1 -p 8080:80 its mean we are mapping the ec2 ip port to container ip port. E.X. : the ec2 has the ip of 10.10.10.10
+
+- 10.10.10.10:8000=172.17.X.X:80
+
+**Network Type mainly 3 types**
+
+- 1. Bridge Network : Default Network. The default ip or the network range os 172.17.0.0 is the Default Network or Bridge Network.
+- 2. Overlay Network
+- 3. Host Network
+
+- **Bridge Network**
+  - _Default Network_ :
+    
+  - _Custom Network_ :
+    -
+    - $ docker network ls
+    - $ docker inspect <container_name>
+    - $ docker network create net
+    - $ docker network create --driver host net
+    - $ docker network create --driver driver brinet
+    - $ docker run -it -d --network net --name centos_net centos_image_name
+    - $ docker run -it -d --network net --name ubuntu_net ubuntu_image_name
+
+- **Overlay Network**
