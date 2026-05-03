@@ -16,6 +16,6 @@
 - **Docker Compose Syntax**
   ![Docker Compose Syntax](./docker-compose.png)
 
-- **To build Only Image** : docker compose build
-- **Build & Deploy** : docker-compose up -d
-
+- To build Only Image : docker compose build
+- Build & Deploy : docker-compose up -d
+- To Delete and Down the image : docker compose down --rmi all
